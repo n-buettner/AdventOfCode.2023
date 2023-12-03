@@ -1,8 +1,8 @@
 ﻿namespace AdventOfCode._2023.Modules;
 
-public class Day2
+public class Day2 : BaseDay
 {
-    public void PartOne()
+    public override void PartOne()
     {
         var redMax = 12;
         var greenMax = 13;
@@ -10,7 +10,7 @@ public class Day2
 
         var rowCounter = 0;
 
-        var inputData = File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), "Data/Day2/Data.txt")).ToList();
+        var inputData = GetFileData("Data/Day2/Data.txt");
         var rowDataList = new List<RowData>();
 
         foreach (var row in inputData)
@@ -25,11 +25,11 @@ public class Day2
         Console.WriteLine($"Day 2 Part 1 Sum: {rowCounter}");
     }
 
-    public void PartTwo()
+    public override void PartTwo()
     {
         var rowCounter = 0;
 
-        var inputData = File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), "Data/Day2/Data.txt")).ToList();
+        var inputData = GetFileData("Data/Day2/Data.txt");
         var rowDataList = new List<RowData>();
 
         foreach (var row in inputData)

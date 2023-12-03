@@ -2,11 +2,11 @@
 
 namespace AdventOfCode._2023.Modules;
 
-public class Day1
+public class Day1 : BaseDay
 {
-    public void PartOne()
+    public override void PartOne()
     {
-        var data = File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), "Data/Day1/Day1.txt")).ToList();
+        var data = GetFileData("Data/Day1/Day1.txt");
 
         int sum = 0;
 
@@ -26,9 +26,9 @@ public class Day1
         Console.WriteLine($"Day 1 Part 1: {sum}");
     }
 
-    public void PartTwo()
+    public override void PartTwo()
     {
-        var data = File.ReadAllLines(Path.Combine(Directory.GetCurrentDirectory(), "Data/Day1/Day1.txt")).ToList();
+        var data = GetFileData("Data/Day1/Day1.txt");
 
         int sum = 0;
 
